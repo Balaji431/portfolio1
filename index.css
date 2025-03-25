@@ -1,85 +1,35 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e;
+    color: white;
+    text-align: center;
     margin: 0;
     padding: 0;
-    background-color: white;
-    color: hsla(0, 0%, 100%, 0.941);
 }
 
-header {
-    background-color: #222;
-    padding: 15px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: black;
-}
-
-.about-container, .qual-container, .doc-container, .project-container, .contact-container {
-    text-align: left;
-    margin: 40px auto;
+.profile {
     padding: 20px;
-    width: 60%;
-    border: 2px solid black;
-    border-radius: 10px;
-    background-color:black;
 }
 
-.profile-section {
-    text-align: center;
-}
-
-.profile-img {
+.profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 3px solid black;
+    border: 3px solid white;
 }
 
-.social-links a {
-    display: block;
-    color: white;
-    margin: 10px;
-    text-decoration: none;
-    font-weight: bold;
+.social-icons {
+    margin-top: 10px;
 }
 
-.project-slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.project {
-    margin: 20px;
-    text-align: center;
+.icon:hover {
+    transform: scale(1.2);
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff9900;
-    color: #121212;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #222;
-    margin-top: 20px;
-}
