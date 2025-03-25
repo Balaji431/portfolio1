@@ -1,27 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balaji Dasetti - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="profile">
-            <img src="profile.jpg" alt="Balaji Dasetti" class="profile-pic">
-            <h1>Balaji Dasetti</h1>
-            <p>Web Developer | Full Stack Enthusiast</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/balaji-d-1675a9324" target="_blank">
-                    <img src="linkin.jpg" alt="LinkedIn" class="icon">
-                </a>
-                <a href="https://github.com/Balaji431" target="_blank">
-                    <img src="git.jpg" alt="GitHub" class="icon">
-                </a>
-            </div>
-        </div>
-    </header>
-</body>
-</html>
+document.addEventListener("DOMContentLoaded", function() {
+    const projects = [
+        {
+            title: "House Hunting",
+            description: "A web app to assist users in finding rental properties.",
+            link: "https://househunting.neocities.org/laptop/serivce"
+        },
+        {
+            title: "Portfolio Website",
+            description: "A personal portfolio to showcase my skills and projects.",
+            link: "#"
+        }
+    ];
 
+    let currentIndex = 0;
+    const projectTitle = document.querySelector(".project h3");
+    const projectDescription = document.querySelector(".project p");
+    const projectLink = document.querySelector(".project a");
+
+    function updateProject() {
+        projectTitle.textContent = projects[currentIndex].title;
+        projectDescription.textContent = projects[currentIndex].description;
+        projectLink.href = projects[currentIndex].link;
+    }
+
+    document.querySelector(".prev").addEventListener("click", function() {
+        currentIndex = (currentIndex === 0) ? projects.length - 1 : currentIndex - 1;
+        updateProject();
+    });
+
+    document.querySelector(".next").addEventListener("click", function() {
+        currentIndex = (currentIndex === projects.length - 1) ? 0 : currentIndex + 1;
+        updateProject();
+    });
+
+    updateProject();
+});
